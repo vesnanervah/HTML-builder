@@ -12,7 +12,7 @@ fs.writeFile(
     }
 );
 stdin.on('data', data=>{
-    if(data == 'exit\n'||data == 'exit'){
+    if(data == 'exit\n'||data == 'exit'||data.toString().trim() == 'exit'){
         process.exit();
     }
     fs.appendFile(filePath, data.toString(), err => {
